@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<p>Thank you for showing interest in working with Mutumi Technology.Kindly fill in the details below to schedule a call with us</p>
+
+<form action="/schedule_call" method="POST" class="schedule-form">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" id="first_name" class="schedule-input">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" id="last_name" class="schedule-input">
+    <label for="organisation">Organisation</label>
+    <input type="text" name="organisation" id="organisation" class="schedule-input">
+    <label for="Email">Email Address</label>
+    <input type="email" name="email" id="email" class="schedule-input">
+    <label for="service" class="schedule-lbl">Service</label>
+        <select name="service" class="service" id="service" >
+            <option disabled selected>Service</option>
+            {% for service in services_offered %}
+                <option value="{{ service }}" class="addservice-input" >{{ service }}</option>
+            {% endfor %}
+        </select>
+    <label for="date">Date for meeting</label>
+    <input type="date" name="date" id="date" class="schedule-input">    
+
+    <button type="submit" >Schedule Call</button>
+        
+    
+
+
+
+</form>
+
+{% endblock %}

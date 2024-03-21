@@ -1,0 +1,8 @@
+# Using placeholders for routes in Jinja templates
+Yes, you can use placeholders in Jinja templates. However, you need to make sure that the placeholder is defined in the context you're rendering the template with. For example, in your Flask route, you might have something like this:
+
+@app.route('/some_route')
+def some_route():
+    placeholder = '/another_route'
+    return render_template('template.html', placeholder=placeholder)
+In this case, placeholder would be replaced with the string '/another_route' in your template.

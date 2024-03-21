@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muntumi Technology</title>
+    <link rel="shortcut icon" href="../static/Images/Favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400&family=Karla:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Catamaran:wght@100..900&family=Livvic:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <script src="/static/script.js" async></script>
+</head>
+<body>
+    {% if current_route == "/" %}
+    <header class="header main-grid">
+        <div class="header-content">
+            <img src="../static/Images/Logo/logo-mtm.jpg" alt="" class="logo" width="20%" height="">
+
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>               
+                </ul>
+            </nav>
+
+            <form action="/work_withus" method="GET" class="header-btn-form">
+                <button type="submit" class="header-btn">Work with us</button>
+            </form>
+
+        </div>
+    </header>
+    {% endif %}
+
+    <main class="main">
+    {% block body %} {% endblock %}
+
+    {%if current_route == "/" %}
+        <section class="hero" id="hero">
+            <div class="hero-text">
+               
+                <h1 class="hero-title ">  Your <span class="main-title-span"> Technology Partner</span> into the limitless future </h1>  
+                <p class="hero-tagline ">We pride ourselves on empowering businesses to unlock their full potential by adapting our tailor-made software solutions to address their needs, and to drive both growth and impact. </p>
+                <button class="hero-btn ">Work with Us</button>
+            </div>
+            
+          
+        </section>
+
+        <section class="about-section main-grid about-flex" id="about">
+            <div    class="about-img">
+                <figure class="about-img1">
+                    <img src="../static/Images/sofware-developer-thinking-while-touching-beard-while-typing-laptop-sitting-desk-with-multiple-screens-parsing-code-focused-database-admin-working-with-team-coding-background.jpg" alt="">
+                </figure>
+                <figure class="about-img2">
+                    <img src="../static/Images/lifestyle-people-office1.jpg" alt="">
+                </figure>
+            </div>
+            
+
+            <div class="about-info">
+                <div class="title-container title-flex">
+                    <h2 class="about-title">About our Company</h2>
+                </div>
+                <h3 class="about-subtitle">We craft bespoke digital solutions that drive impact and growth</h3>
+                <p>
+                    Established in 2011 with a vision to revolutionise digital solutions, our journey has been marked by a relentless pursuit of excellence in developing bespoke software solutions.  
+                    We believe in the power of technology to drive your business forward. Whether you're a startup looking to establish a digital presence or an established enterprise seeking to optimize operations, our comprehensive suite of services is geared towards delivering solutions that enable business to thrive in the digital age.
+                    
+            </div>
+
+        </section>
+
+        <section class="services" id="">
+            <div class="title-container">
+                <h2 class="section-title">Services we offer</h2>
+            </div>
+            
+            <h3>We offer customised digital solutions</h3>
+
+            <div class="text-content main-grid services-grid">
+                <div class="service col">
+                    <figure class="service-img">
+                         <i class="fa-solid fa-globe icon"></i>
+                    </figure>
+                    <h4 class="service-title">Web development</h4>
+                    <p class="service-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eos mollitia ipsa, provident nobis necessitatibus repudiandae nihil iste fuga porro aspernatur sapiente delectus quas tenetur aliquid, reiciendis aperiam assumenda asperiores.
+                    </p>
+                </div>
+    
+                <div class="service col">
+                    <figure class="service-img">
+                        <i class="fa-solid fa-laptop-code icon"></i>
+                    </figure>
+                    <h4 class="service-title">App development</h4>
+                    <p class="service-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ut ipsam optio dolorum eaque! Hic soluta eum cumque quos provident! Aut, alias quam error nam in nesciunt aliquam ipsa optio!
+                    </p>
+                </div>
+    
+                <div class="service col">
+                    <figure class="service-img">
+                        <figure class="service-img">
+                            <i class="fa-solid fa-bullhorn icon"></i>
+                        </figure>
+                    </figure>
+                    <h4 class="service-title">Digital marketing</h4>
+                    <p class="service-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, vero, maiores ducimus nemo quos voluptatem porro accusamus consequatur ea magnam molestiae, distinctio reiciendis tenetur consectetur cum voluptas enim reprehenderit adipisci!
+                    </p>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <section class="work">
+            <div class="title-container">
+                <h2 class="section-title">Our Work</h2>
+            </div>
+            
+            <h3>Have a look at our work</h3>
+
+            <div class="main-grid project-grid">
+                <div class="project">
+                    <figure class="project-img">
+                        <img src="../static/Images/pexels-cottonbro-studio-7579831.jpg" alt="">
+                    </figure>
+                    <h4 class="project-title">Clinic Management App</h4>
+                    <p class="project-info"> a workflow and records management application for health facility with bio-metric verification for patients and detailed reporting for health care professionals and facility administrators.</p>
+                    <a href="http://">Live Demo</a>
+                </div>
+                <div class="project">
+                    <figure class="project-img">
+                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                    </figure>
+                    <h4 class="project-title">Team lead</h4>
+                    <p class="project-info">Jane Doe</p>
+                    <a href="http://">Live Demo</a>
+                </div>
+                <div class="project">
+                    <figure class="project-img">
+                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                    </figure>
+                    <h4 class="project-title">Team lead</h4>
+                    <p class="project-info">Jane Doe</p>
+                    <a href="http://">Live Demo</a>
+                </div>
+                <div class="project">
+                    <figure class="project-img">
+                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                    </figure>
+                    <h4 class="project-title">Team lead</h4>
+                    <p class="project-info">Jane Doe</p>
+                    <a href="http://">Live Demo</a>
+                </div>
+                
+        </section>
+
+        <section class="reviews">
+            <div class="title-container">
+                <h2 class="section-title">Customer Reviews</h2>
+            </div>
+            
+            <h3>What our clients have to say about us</h3>
+
+            <div class="review-grid main-grid">
+                <div class="review col">
+                    <div class="review-title">
+                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
+                        <p class="review-name">Jane Doe</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                </div>
+
+                <div class="review col">
+                    <div class="review-title">
+                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
+                        <p class="review-name">Jane Doe</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                </div>
+                <div class="review col">
+                    <div class="review-title">
+                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
+                        <p class="review-name">Jane Doe</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                </div>
+
+            </div>
+
+          
+        </section>
+
+        <section class="contact-section">
+            <div class="title-container">
+                <h2 class="section-title">Contact</h2>
+            </div>
+            
+            <h3>Contact Us</h3>
+            
+            <div class="contact-grid main-grid">
+                <div class="contact-info">
+                    <div class="contact contact-card-one">
+                        <h4 class="contact-title">Address</h4>
+                        <p class="contact-icon"><i class="fa-solid fa-location-dot"></i></p>
+                        <p class="contact-text">Plot 34 Petro Building, Ntinda</p>
+                        <p class="contact-text">Kampala, Uganda</p>
+                        
+                    </div>
+                    <div class="contact contact-card-two">
+                        <h4 class="contact-title">Call Us</h4>
+                        <p class="contact-icon"><i class="fa-solid fa-phone"></i></p>
+                        <p class="contact-text">+256 777 888 999</p>
+                        <p class="contact-text">+256 757 888 999</p>
+                        
+                    </div>
+                    <div class="contact contact-card-three">
+                        <h4 class="contact-title">Email Us</h4>
+                        <p class="contact-icon"><i class="fa-solid fa-envelope"></i></p>
+                        <p class="contact-text">info@techub.com</p>
+                       
+                        
+                    </div>
+                    <div class="contact contact-card-four">
+                        <h4 class="contact-title">Working hours</h4>
+                        <p class="contact-icon"><i class="fa-solid fa-clock"></i></p>
+                        <p class="contact-text">Monday - Friday</p>
+                        <p class="contact-text">09:00 - 16:00 Hours</p>
+                        
+                    </div>
+
+                </div>
+                <form action="" class="form-grid form">
+                    <input type="text" placeholder="Name" class="form-name form-item">
+                    <input type="text" placeholder="Email" class="form-email form-item">
+                    <input type="text" placeholder="Subject" class="form-subject form-item">
+                    <input type="text" placeholder="Message" class="form-msg form-item">
+                    <button class="form-btn form-item">Submit</button>
+
+                </form>
+
+            </div>
+
+
+        </section>
+    {% endif %}    
+    </main>
+
+{% if current_route == "/" %}
+    <footer class="footer main-grid footer-grid">
+        <div class="footer-logo footer-item">
+            <img src="Images/Logo/SQUARED_3-removebg-preview.png" alt="" class="footer-img">
+        </div>
+
+        <div class="footer-sitemap footer-item">
+            <h4> Sitemap</h4>
+            <ul>
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>     
+            </ul>
+        </div>
+
+        <div class="footer-services footer-item">
+            <h4>Services</h4>
+          <ul>
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About us</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact footer-item">
+            <h4>Contact Us</h4>
+          
+        </div>
+        
+
+
+    </footer>
+    <div class="copyright">
+       <p>&copy Copyright <span class="copyright-span">TECHUB</span>. All Rights Reserved</p>
+        <p>Designed by <a href="">Norah Ariokot</a></p>
+    </div>
+{% endif %}    
+    
+</body>
+</html>
