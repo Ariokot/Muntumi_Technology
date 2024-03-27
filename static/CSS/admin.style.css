@@ -1,0 +1,145 @@
+* {box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+  
+  
+
+}
+
+
+/* ============== 
+    Typography
+   ============== */ 
+
+ /* ============== 
+    Layout
+   ============== */
+
+ /* Login page */
+.login-grid,
+.admin-reg-grid,
+.flash-msg-body{
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr)  minmax(90%, 1fr) minmax(1em, 1fr);
+    /*border: solid yellow;*/
+   
+}
+
+
+.login-img,
+.admin-reg-img {
+    display: none;
+}
+
+
+
+.login-info,
+.admin-reg-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    align-items: self-start;
+    grid-column: 2;
+}
+
+
+.login-logo {
+    height: 100px;
+
+}
+
+.admin-login-logo {
+    height: 80px;
+}
+
+
+
+.login-form,
+.admin-reg-form {
+    display: flex;
+    flex-direction: column;
+    /*border: solid green;*/
+    width: 80%;
+} 
+
+.create-acct-title{
+    margin-bottom: 0;
+}
+
+.admin-form-item {
+    width: 100%;
+    
+}
+
+
+.flash-msg-body {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    & h1 {
+        grid-column: 2;
+
+    }
+
+    & p {
+        grid-column: 2;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+}
+
+
+/* ================
+    Media-Queries
+    =============== */
+    @media (min-width:600px) {
+        /* Login page */
+
+   .login-grid,
+    .admin-reg-grid {
+        display: grid;
+        grid-template-columns: minmax(2em, 1fr) minmax(30%,1fr) minmax(50%,1fr) minmax(2em, 1fr);
+        /*border: solid yellow;*/
+       
+    }
+
+    .login-img,
+    .admin-reg-img {
+        display: block;
+        height: 100vh;
+        width: 100%;
+         /*border: solid black;*/
+         & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+         }
+    
+    }
+
+ 
+    admin-reg-img,
+    .login-img {
+        grid-column: 3;
+    }
+
+    .admin-reg-info,
+    .login-info {
+        grid-column: 2;
+        /*border: solid red;*/
+    
+    }
+
+       
+
+}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if current_route == "schedulled_call" %}
+<header class="admin-header">
+    <div class="adminheader-content">
+        <img src="../static/Images/Logo/logo-mtm-removebg-preview.png" alt="" class="logo" width="20%" height="">
+
+        <form action="/" method="GET" class="header-btn-form">
+            <button type="submit" class="header-btn">Back to site</button>
+        </form>
+
+    </div>
+</header>
+
+<div class="flash-msg-body">
+    <h1> Your call and has scheduled!</h1>
+    <p> Check your email inbox for email confirmation from our team and details of the call </p>
+</div>
+
+{% endif %}
+
+
+{% if current_route == "user_msg" %}
+<header class="admin-header main-grid">
+    <div class="adminheader-content">
+        <img src="../static/Images/Logo/logo-mtm.jpg" alt="" class="logo" width="20%" height="">
+
+        <form action="/" method="GET" class="header-btn-form">
+            <button type="submit" class="header-btn">Back to site</button>
+        </form>
+
+    </div>
+</header>
+<div class="flash-msg-body">
+    <h1> Your message has been received!</h1>
+    <p> Check your email inbox for confirmation of receipt. </p>
+</div>
+
+{% endif %}
+
+
+{% endblock %}

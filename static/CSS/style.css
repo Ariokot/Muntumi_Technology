@@ -502,6 +502,11 @@ nav {
     
 }
 
+.login-form-item {
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
 .form-msg {
     height: 30vh;
     align-self: self-start;
@@ -766,11 +771,13 @@ h3 {
 .form-name {
     grid-column: 1;
     grid-row: 1;
+  
 }
 
 .form-email {
     grid-row: 1;
     grid-column: 2;
+    /*border: solid red;*/
 }
 
 .form-subject {

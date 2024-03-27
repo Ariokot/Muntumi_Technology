@@ -5,7 +5,7 @@ EMAIL_ADDRESS = os.environ.get('Email_User')
 EMAIL_PASSWORD = os.environ.get('Email_password')
 
 
-def send_mail(recipient):
+def send_appointment_mail(recipient, name, service,date):
     # access the mail server of the email provider and the port number
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
         smtp.ehlo()
@@ -15,12 +15,30 @@ def send_mail(recipient):
 
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
 
-        subject = "Greetings!"
-        body ="Hullo, World!"
+        subject = "Your call has been scheduled"
+        body = f"Hullo, {name}\n\nThank you for showing interest in working with Muntumi Technology. Your meeting call for {service} service on {date} has been set up. A member of our team will reach out to you with more details regarding the call. We look forward to working with you!\n\nMuntumi Technology"
 
         msg = f'Subject: {subject}\n\n{body}'
 
         smtp.sendmail(EMAIL_ADDRESS, recipient, msg)
+
+
+def receive_email(sender,  sender_subject, sender_msg):
+    # access the mail server of the email provider and the port number
+    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
+        smtp.ehlo()  
+    
+
+        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+
+        subject = f"Message from {sender}: {sender_subject}"
+        body = sender_msg
+
+        msg = f'Subject: {subject}\n\n{body}'
+
+        smtp.sendmail(sender, EMAIL_ADDRESS, msg)
 
 
 

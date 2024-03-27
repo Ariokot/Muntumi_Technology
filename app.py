@@ -4,7 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
 
-from mail import send_mail, EMAIL_ADDRESS, EMAIL_PASSWORD
+from mail import send_appointment_mail, receive_email, EMAIL_ADDRESS, EMAIL_PASSWORD
 
 # Configure application
 app = Flask(__name__)
@@ -34,8 +34,34 @@ def work_withus():
 @app.route("/schedule_call", methods=["POST"])   
 def schedule_call():
     recipient =request.form.get("email")
-    send_mail(recipient)
+    name = request.form.get("first_name")
+    service = request.form.get("service")
+    date = request.form.get("date")
+    send_appointment_mail(recipient, name, service, date)
 
-    return redirect("/")
+    schedulled_call = True
+
+    return render_template("flashmsg.html", current_route="schedulled_call")
+
+@app.route("/user_msg", methods=["POST"])  
+def user_msg():
+    name = request.form.get("name")
+    email = request.form.get("email")
+    subject = request.form.get("subject")
+    msg = request.form.get("msg")
+    receive_email(email, subject, msg)
+    
+    return render_template("flashmsg.html", current_route="user_msg")
+
+@app.route("/admin_reg", methods=["GET"])    
+def admin_reg():
+    return render_template("admin_reg.html", current_route="admin_reg")
+
+@app.route("/admin_signin",  methods=["GET", "POST"])  
+def admin_signin():
+    if request.method == "GET":
+        return render_template("admin_signin.html", current_route="admin_signin")  
+
+
       
 

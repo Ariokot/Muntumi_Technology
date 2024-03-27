@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if current_route == "admin_reg" %}
+
+<main class="admin-reg-grid">
+    <div class="admin-reg-info">
+        <img src="../static/Images/Logo/logo-mtm.jpg" alt="" class="admin-login-logo">
+        <h1> Admin Portal </h1>
+        <h2> Create Admin Profile </h2>
+
+        <form action="" class="admin-reg-form">
+            <input type="text" name="" id="" placeholder="name" class="admin-reg-form-input">
+            <input type="text" name="" id="" placeholder="email" class="admin-reg-form-input">
+            <input type="text" placeholder="password" class="admin-reg-form-input">
+            <input type="text" placeholder="Verify Password" class="admin-reg-form-input">
+            <button class="admin-reg-btn">Create account</button>
+        </form>
+        
+
+    </div>
+
+    <div class="admin-reg-img">
+        <img src="../static/Images/pexels-linkedin-sales-navigator-1251862.jpg" alt="">
+    </div>
+{% endif %}   
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if current_route == "admin_signin" %}
+<section class="login_body login-grid">
+    <div class="login-info">
+        <img src="../static/Images/Logo/logo-mtm.jpg" alt="" class="admin-login-logo">
+        <h1 class="login-title">Admin Portal </h1>
+        <h2 class="login-txt"> Log in </h2>
+        <p class="login-subtitle">Please fill your information below</p>
+        <form action="/admin_login" class="login-form" >
+            <label for="Email" class="admin-form-item">Email Address</label>
+            <input type="text" name="admin_name" id="" placeholder="Email" class="login-form-item admin-form-item" ">
+            <label for="Password" class="admin-form-item" >Password</label>
+            <input type="text" name="admin_pwd" id="" placeholder="Password" class="login-form-item admin-form-item"">
+            <button class="login-btn">Sign in</button>
+            <a href="" class="password-reset" class="admin-form-item">Forgot password</a>
+           
+        </form>
+
+        <h2 class="register-title create-acct-title">New here</h2>
+        <form action="/admin_registration">
+            <button class="register-btn">Create an account</button>
+            
+        </form>
+
+
+    </div>
+
+
+    <div class="login-img">
+        <img src="../static/Images/pexels-mikhail-nilov-6894059.jpg" alt="" >
+
+    </div>
+    
+</section>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,203 @@
+* {box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+   
+
+}
+
+
+/* ============== 
+    Typography
+   ============== */ 
+
+ /* ============== 
+    Layout
+   ============== */
+
+ 
+.schedule-title,
+.admin-header {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr)  minmax(90%, 1fr) minmax(1em, 1fr);
+    /*border: solid yellow;*/
+   
+}
+
+.admin-header{
+    width: 90%;
+    margin: 0 auto;
+    /*border: solid black;*/
+}
+
+.adminheader-content {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+/*border: solid red;*/
+}
+
+.schedule-title {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-family: 'Livic', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    /*border: solid red;*/
+ 
+
+    & p {
+        grid-column: 2;
+        text-align: justify;
+        /*border: solid black;*/
+     
+        
+    }
+}
+
+
+
+/* Schedulelle call Form*/
+
+.form-container {
+    width: 90%;
+    /*border:  2px solid #000015;*/
+    margin: 0 auto;
+   
+}
+.schedule-form {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    width: 80%;
+    margin: 0 auto;
+    /*border: solid red;*/
+   
+    background-color: rgba(255, 255, 255);
+
+}
+
+/*.form-lbl,
+.schedule-input,
+.schedule-form-button {
+    grid-column: 2;
+}*/
+
+.form-container{
+    width: 60%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+}
+
+.form-stn-left,
+.form-stn-right,
+.form-stn {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-stn {
+    & .schedule-input {
+        margin-bottom: 1.5em;
+    }
+  
+}
+
+
+.schedule-input {
+    width: 80%;
+    padding: .5em;
+    border: solid 1px #808080;
+    border-radius: 3px;
+    
+}
+
+.form-lbl {
+    /*border: solid red;*/
+}
+
+.schedule-form-button {
+    grid-column: 2;
+    justify-self: center;
+    padding-inline: 1em;
+    padding-block: .5em;
+    background-color: #000050;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  
+}
+
+
+
+
+
+
+/* ================
+    Media-Queries
+    =============== */
+    @media (min-width:600px) {
+    .schedule-form {
+        grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(40%, 1fr)) minmax(2em, 1fr);
+        /*border: solid yellow;*/
+       
+    }
+
+    
+    .schedule-title {
+        & p {
+            text-align: center;
+        }
+     
+    }
+
+    /*.form-lbl,
+    .schedule-input {
+        grid-column: 2;
+    }
+
+    .form-lbl-right,
+    .schedule-input-right {
+        grid-column: 3;
+        border: solid black;
+        align-self: start;
+    }*/
+
+    .schedule-form {
+        width: 95%;
+    }
+
+    .form-stn-left {
+    grid-column: 2;
+    }
+
+    .form-stn-right {
+    grid-column: 3;
+    }
+
+    .form-stn {
+        grid-column: span 2 / 4;
+        width: 70%;
+    }
+
+
+    .schedule-form-button {
+        grid-column: span 2 / 4;
+        justify-self: center;
+    }
+
+
+}

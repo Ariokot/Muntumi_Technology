@@ -1,33 +1,67 @@
 {% extends "layout.html" %}
 
+{% block styles %}
+    <style>
+        body {
+            background-color: #f3f3f3;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-<p>Thank you for showing interest in working with Mutumi Technology.Kindly fill in the details below to schedule a call with us</p>
+<header class="admin-header">
+    <div class="adminheader-content">
+        <img src="../static/Images/Logo/logo-mtm-removebg-preview.png" alt="" class="logo" width="20%" height="">
 
-<form action="/schedule_call" method="POST" class="schedule-form">
-    <label for="first_name">First Name</label>
-    <input type="text" name="first_name" id="first_name" class="schedule-input">
-    <label for="last_name">Last Name</label>
-    <input type="text" name="last_name" id="last_name" class="schedule-input">
-    <label for="organisation">Organisation</label>
-    <input type="text" name="organisation" id="organisation" class="schedule-input">
-    <label for="Email">Email Address</label>
-    <input type="email" name="email" id="email" class="schedule-input">
-    <label for="service" class="schedule-lbl">Service</label>
-        <select name="service" class="service" id="service" >
-            <option disabled selected>Service</option>
-            {% for service in services_offered %}
-                <option value="{{ service }}" class="addservice-input" >{{ service }}</option>
-            {% endfor %}
-        </select>
-    <label for="date">Date for meeting</label>
-    <input type="date" name="date" id="date" class="schedule-input">    
+        <form action="/" method="GET" class="header-btn-form">
+            <button type="submit" class="header-btn">Back to site</button>
+        </form>
 
-    <button type="submit" >Schedule Call</button>
-        
+    </div>
+</header>
+<main class="schedule-main">
+    <div class="schedule-title">
+        <p>Thank you for showing interest in working with Mutumi Technology.<br>Kindly fill in the details below to schedule a call with us</p>
+    </div>
     
-
-
-
-</form>
+    <div class="form-container">
+        <form action="/schedule_call" method="POST" class="schedule-form form-grid" >
+            <div class="form-stn-left">
+                <label for="first_name" class="form-lbl" >First Name</label>
+                <input type="text" name="first_name" id="first_name" class="schedule-input">
+            </div>
+            <div class="form-stn-right">
+                <label for="last_name" class="form-lbl form-lbl-right" >Last Name</label>
+                <input type="text" name="last_name" id="last_name" class="schedule-input schedule-input-right">
+            </div>
+            
+            <div class="form-stn">
+                <label for="organisation" class="form-lbl" >Organisation</label>
+                <input type="text" name="organisation" id="organisation" class="schedule-input">
+                <label for="Email" class="form-lbl" >Email Address</label>
+                <input type="email" name="email" id="email" class="schedule-input">
+                <label for="service" class="schedule-lbl form-lbl" >Service</label>
+                    <select name="service" class="service schedule-input" id="service" >
+                        <option disabled selected >Service</option>
+                        {% for service in services_offered %}
+                            <option value="{{ service }}" class="addservice-input" >{{ service }}</option>
+                        {% endfor %}
+                    </select>
+                <label for="date" class="form-lbl" >Date for meeting</label>
+                <input type="date" name="date" id="date" class="schedule-input">    
+             
+            </div>
+            
+            <button type="submit" class="schedule-form-button">Schedule Call</button>
+                
+            
+        
+        
+        
+        </form>
+    
+    </div>
+    
+</main>
 
 {% endblock %}
