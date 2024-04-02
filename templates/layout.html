@@ -29,11 +29,20 @@
             <img src="../static/Images/Logo/logo-mtm.jpg" alt="" class="logo" width="20%" height="">
 
             <nav>
+                <ul class="nav-side-bar" id="side-bar">
+                    <li class="nav-item" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li class="nav-item" onclick="hideSidebar()"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item" onclick="hideSidebar()" ><a href="#about" class="nav-link">About us</a></li>
+                    <li class="nav-item" onclick="hideSidebar()" ><a href="#services" class="nav-link">Our Services</a></li>
+                    <li class="nav-item"onclick="hideSidebar()" ><a href="#contact" class="nav-link">Contact Us</a></li>               
+                </ul>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">About us</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>               
+                    <li class="nav-item hide-on-mobile"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item hide-on-mobile"><a href="#about" class="nav-link">About us</a></li>
+                    <li class="nav-item hide-on-mobile"><a href="#services" class="nav-link">Our Services</a></li>
+                    <li class="nav-item hide-on-mobile"><a href="#contact" class="nav-link">Contact Us</a></li> 
+                   <li onclick="showSidebar()" class="menu-btn"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
                 </ul>
             </nav>
 
@@ -63,10 +72,10 @@
         <section class="about-section main-grid about-flex" id="about">
             <div    class="about-img">
                 <figure class="about-img1">
-                    <img src="../static/Images/sofware-developer-thinking-while-touching-beard-while-typing-laptop-sitting-desk-with-multiple-screens-parsing-code-focused-database-admin-working-with-team-coding-background.jpg" alt="">
+                    <img src="../static/Images/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth.jpg" alt="">
                 </figure>
                 <figure class="about-img2">
-                    <img src="../static/Images/lifestyle-people-office1.jpg" alt="">
+                    <img src="../static/Images/sofware-developer3-thinking-while-touching-beard-while-typing-laptop-sitting-desk-with-multiple-screens-parsing-code-focused-database-admin-working-with-team-coding-background.jpg" alt="">
                 </figure>
             </div>
             
@@ -78,13 +87,38 @@
                 <h3 class="about-subtitle">We craft bespoke digital solutions that drive impact and growth</h3>
                 <p>
                     Established in 2011 with a vision to revolutionise digital solutions, our journey has been marked by a relentless pursuit of excellence in developing bespoke software solutions.  
-                    We believe in the power of technology to drive your business forward. Whether you're a startup looking to establish a digital presence or an established enterprise seeking to optimize operations, our comprehensive suite of services is geared towards delivering solutions that enable business to thrive in the digital age.
+                    We believe in the power of technology to drive your business forward. 
+                </p>  
+                <div class="choose-us-wrapper">
+                    <h4 class="choose-us-title">Why choose us</h4>
+                    <div class="choose-us-div">
+                        <img src="../static/Images/Icon/3088383_astronomy_launch_rocket_shuttle_space_icon -3.png" alt="" class="about-icon">
+                        <div class="choose-us-info">
+                            <h5>Growth</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione omnis laudantium, inventore nostrum, rem.</p>
+                        </div>
+                    </div>
+                    <div class="choose-us-div">
+                        <img src="../static/Images/Icon/4579065_idea_lamp_marketing_outline_icon.png" alt="" class="about-icon">
+                        <div class="choose-us-info">
+                            <h5>innovation</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione omnis laudantium, inventore nostrum, rem.</p>
+                        </div>
+                    </div>
+                    <div class="choose-us-div">
+                        <img src="../static/Images/Icon/7055179_business_consultation_handshake_agreement_partner_icon.png" alt="" class="about-icon">
+                        <div class="choose-us-info">
+                            <h5>Collaboration</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione omnis laudantium, inventore nostrum, rem.</p>
+                        </div>
+                    </div>
+                </div>  
                     
             </div>
 
         </section>
 
-        <section class="services" id="">
+        <section class="services" id="services">
             <div class="title-container">
                 <h2 class="section-title">Services we offer</h2>
             </div>
@@ -92,35 +126,55 @@
             <h3>We offer customised digital solutions</h3>
 
             <div class="text-content main-grid services-grid">
-                <div class="service col">
-                    <figure class="service-img">
-                         <i class="fa-solid fa-globe icon"></i>
-                    </figure>
-                    <h4 class="service-title">Web development</h4>
-                    <p class="service-text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eos mollitia ipsa, provident nobis necessitatibus repudiandae nihil iste fuga porro aspernatur sapiente delectus quas tenetur aliquid, reiciendis aperiam assumenda asperiores.
-                    </p>
-                </div>
-    
-                <div class="service col">
-                    <figure class="service-img">
-                        <i class="fa-solid fa-laptop-code icon"></i>
-                    </figure>
-                    <h4 class="service-title">App development</h4>
-                    <p class="service-text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ut ipsam optio dolorum eaque! Hic soluta eum cumque quos provident! Aut, alias quam error nam in nesciunt aliquam ipsa optio!
-                    </p>
-                </div>
-    
-                <div class="service col">
-                    <figure class="service-img">
+              
+                    <div class="service col" id="web-service" onclick="updateStyle()" onmouseenter="updateStyle2()" onmouseout="resetStyle()">
                         <figure class="service-img">
-                            <i class="fa-solid fa-bullhorn icon"></i>
+                            <img src="../static/Images/Icon/5355692_code_coding_development_programming_web_icon.png" alt="">
                         </figure>
+                        <h4 class="service-title">Web development</h4>
+                        <p class="service-text">
+                            Our website development services comprise of developing intuitive, user-friendly and scalable websites and web applications to meet your unique needs.
+                            <br>
+                            <details>
+                                <summary>Read more</summary>
+                            <br>From conceptualization to launch, we use the latest technologies and industry best practices, to create websites and web applications that are visually stunning, responsive, and optimized for performance across all devices.
+                            <br>Work with us to elevate your online presence and to create your next web application to take your business to the next level.
+                            </details>
+                        </p>
+                    
+                    </div>
+        
+    
+                <div class="service col" onclick="updateStyle()" onmouseenter="updateStyle2()" onmouseout="resetStyle()" id="mobile-service">
+                    <figure class="service-img">
+                       <img src="../static/Images/Icon/mobile-development.png" alt="">
                     </figure>
-                    <h4 class="service-title">Digital marketing</h4>
+                    <h4 class="service-title">Mobile App development</h4>
                     <p class="service-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, vero, maiores ducimus nemo quos voluptatem porro accusamus consequatur ea magnam molestiae, distinctio reiciendis tenetur consectetur cum voluptas enim reprehenderit adipisci!
+                        Whether you need a native iOS app, an Android app, or a cross-platform solution, we have the expertise to bring your app idea to life.
+                        <details>
+                            <summary>Read more</summary>
+                        <br>Our mobile app development services encompass the entire app lifecycle, from ideation and design to development, testing, and deployment. 
+                        <br>Work with us to build your next mobile app and unlock new opportunities for your business. 
+                        </details>    
+                    </p>
+                </div>
+    
+                <div class="service col" onclick="updateStyle()" onmouseenter="updateStyle2()" onmouseout="resetStyle()" id="ux-service">
+                   
+                    <figure class="service-img">
+                        <img src="../static/Images/Icon/web-design.png" alt="">
+                    </figure>
+                  
+                    <h4 class="service-title">UI/UX Design</h4>
+                    <p class="service-text">
+                        We specialize in creating exceptional user experiences that enhance user interactions and drive engagement.
+                        <details>
+                            <summary>Read More </summary>
+                        <br>Our UI/UX design services are grounded in a deep understanding of user behavior, industry trends, and design principles. 
+                        From wireframing and prototyping to final design implementation we leverage cutting-edge tools and methodologies to deliver seamless, immersive experiences across web and mobile platforms. 
+                        <br>Let's work together to create unforgettable experiences that leave a lasting impression on your users and propel your business forward.
+                        </details>    
                     </p>
                 </div>
 
@@ -141,31 +195,31 @@
                         <img src="../static/Images/pexels-cottonbro-studio-7579831.jpg" alt="">
                     </figure>
                     <h4 class="project-title">Clinic Management App</h4>
-                    <p class="project-info"> a workflow and records management application for health facility with bio-metric verification for patients and detailed reporting for health care professionals and facility administrators.</p>
+                    <p class="project-info"> A workflow and records management application for health facilities </p>
                     <a href="http://">Live Demo</a>
                 </div>
                 <div class="project">
                     <figure class="project-img">
-                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                        <img src="../static/Images/pexels-katerina-holmes-5905475.jpg" alt="">
                     </figure>
-                    <h4 class="project-title">Team lead</h4>
-                    <p class="project-info">Jane Doe</p>
+                    <h4 class="project-title">Mathematics Learning Aid</h4>
+                    <p class="project-info">An interactive, topic driven,self learning tool for highschool mathematics</p>
                     <a href="http://">Live Demo</a>
                 </div>
                 <div class="project">
                     <figure class="project-img">
-                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                        <img src="../static/Images/insurance-claim-form-document-application-concept.jpg" alt="">
                     </figure>
-                    <h4 class="project-title">Team lead</h4>
-                    <p class="project-info">Jane Doe</p>
+                    <h4 class="project-title">Workflow Automation</h4>
+                    <p class="project-info">An app to automate processing of insuracance claims for clients</p>
                     <a href="http://">Live Demo</a>
                 </div>
                 <div class="project">
                     <figure class="project-img">
-                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="">
+                        <img src="../static/Images/pexels-robert-so-16339549.jpg" alt="">
                     </figure>
-                    <h4 class="project-title">Team lead</h4>
-                    <p class="project-info">Jane Doe</p>
+                    <h4 class="project-title">Municipal Maintenance Works Job Board</h4>
+                    <p class="project-info">A digital solution for municipal managers to streamline maintenance job allocation and monitoring processes</p>
                     <a href="http://">Live Demo</a>
                 </div>
                 
@@ -180,34 +234,58 @@
 
             <div class="review-grid main-grid">
                 <div class="review col">
-                    <div class="review-title">
-                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
-                        <p class="review-name">Jane Doe</p>
+                    <div class="review-header">
+                        <img src="../static/Images/businesswoman-executive-professional-success-concept.jpg" alt="" class="review-img">
+                        <div class="review-header-text">
+                            <h5 class="review-name">Jane Muntu</h5>
+                            <h6 class="review-title">Health Care administrator</h6>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    <div class="review-info">
+                        <img src="../static/Images/Icon/open (2).png" alt="" class="review-info-img">
+                        <p class="review-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    </div>
+                  
                 </div>
 
                 <div class="review col">
-                    <div class="review-title">
-                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
-                        <p class="review-name">Jane Doe</p>
+                    <div class="review-header">
+                        <img src="../static/Images/man-wearing-round-eyeglasses-casual-t-shirt.jpg" alt="" class="review-img">
+                        <div class="review-header-text">
+                            <h5 class="review-name">Jane Muntu</h5>
+                            <h6 class="review-title">Health Care administrator</h6>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    <div class="review-info">
+                        <img src="../static/Images/Icon/open (2).png" alt="" class="review-info-img">
+                        <p class="review-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    </div>
+                  
                 </div>
+
                 <div class="review col">
-                    <div class="review-title">
-                        <img src="../static/Images/african-american-woman-smiling-blue-background.jpg" alt="" class="review-img">
-                        <p class="review-name">Jane Doe</p>
+                    <div class="review-header">
+                        <img src="../static/Images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg" alt="" class="review-img">
+                        <div class="review-header-text">
+                            <h5 class="review-name">Jane Muntu</h5>
+                            <h6 class="review-title">Health Care administrator</h6>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    <div class="review-info">
+                        <img src="../static/Images/Icon/open (2).png" alt="" class="review-info-img">
+                        <p class="review-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cum ipsam. Saepe, assumenda accusantium. Magnam culpa labore molestias voluptatem, accusantium corporis ratione ut voluptatum veritatis suscipit, ducimus exercitationem eius distinctio?</p>
+                    </div>
+                  
                 </div>
+
+                
 
             </div>
 
           
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="title-container">
                 <h2 class="section-title">Contact</h2>
             </div>
@@ -216,35 +294,27 @@
             
             <div class="contact-grid main-grid">
                 <div class="contact-info">
-                    <div class="contact contact-card-one">
+                    <div class="contact contact-card">
                         <h4 class="contact-title">Address</h4>
                         <p class="contact-icon"><i class="fa-solid fa-location-dot"></i></p>
-                        <p class="contact-text">Plot 34 Petro Building, Ntinda</p>
-                        <p class="contact-text">Kampala, Uganda</p>
+                        <p class="contact-text">Block A, Cnr 3rd Ave and Cedar Road</p>
+                        <p class="contact-text">Willow Wood Office Park,Broadacres</p>
                         
                     </div>
-                    <div class="contact contact-card-two">
+                    <div class="contact contact-card">
                         <h4 class="contact-title">Call Us</h4>
                         <p class="contact-icon"><i class="fa-solid fa-phone"></i></p>
-                        <p class="contact-text">+256 777 888 999</p>
-                        <p class="contact-text">+256 757 888 999</p>
-                        
+                        <p class="contact-text">+27 (0)11 065 9448</p>
+                    
                     </div>
-                    <div class="contact contact-card-three">
+                    <div class="contact contact-card">
                         <h4 class="contact-title">Email Us</h4>
                         <p class="contact-icon"><i class="fa-solid fa-envelope"></i></p>
-                        <p class="contact-text">info@techub.com</p>
+                        <p class="contact-text">info@muntumi.com</p>
                        
                         
                     </div>
-                    <div class="contact contact-card-four">
-                        <h4 class="contact-title">Working hours</h4>
-                        <p class="contact-icon"><i class="fa-solid fa-clock"></i></p>
-                        <p class="contact-text">Monday - Friday</p>
-                        <p class="contact-text">09:00 - 16:00 Hours</p>
-                        
-                    </div>
-
+                  
                 </div>
                 <form action="/user_msg" class="form-grid form" method="POST">
                     <input type="text" placeholder="Name"  name="name" class="form-name form-item">
@@ -265,32 +335,40 @@
 {% if current_route == "/" %}
     <footer class="footer main-grid footer-grid">
         <div class="footer-logo footer-item">
-            <img src="Images/Logo/SQUARED_3-removebg-preview.png" alt="" class="footer-img">
+            <img src="../static/Images/Logo/logo-mtm-removebg-preview (1).png" alt="" class="footer-img">
+            <p>Your technology Partner into the limitless future  </p>
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f social"></i>
+                <i class="fa-brands fa-x-twitter social"></i>
+                <i class="fa-brands fa-instagram social"></i>
+            </div>
         </div>
 
         <div class="footer-sitemap footer-item">
-            <h4> Sitemap</h4>
-            <ul>
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">About us</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Team</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>     
+            <h4 class="footer-heading"> Sitemap</h4>
+            <ul class="footer-list">
+                <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>     
             </ul>
         </div>
 
         <div class="footer-services footer-item">
-            <h4>Services</h4>
-          <ul>
-            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="" class="nav-link">About us</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Our Services</a></li>
+            <h4 class="footer-heading">Services</h4>
+          <ul class="footer-list">
+            <li class="nav-item"><a href="#web-service" class="nav-link">Web development</a></li>
+            <li class="nav-item"><a href="#mobile-service" class="nav-link">Mobile App development</a></li>
+            <li class="nav-item"><a href="#ux-service" class="nav-link">UI/UX Design</a></li>
           </ul>
         </div>
 
         <div class="footer-contact footer-item">
-            <h4>Contact Us</h4>
+            <h4 class="footer-heading">Contact Us</h4>
+            <p class="footer-contact-item"><i class="fa-solid fa-phone footer-contact-icon"></i> +27 (0)11 065 9448</p>
+            <p class="footer-contact-item"><i class="fa-solid fa-envelope footer-contact-icon"></i> info@muntumi.com</p>
+            <p class="footer-contact-item"><i class="fa-solid fa-location-dot footer-contact-icon"></i> Block A, Cnr 3rd Ave and Cedar Road</p>
+        
           
         </div>
         
@@ -298,8 +376,11 @@
 
     </footer>
     <div class="copyright">
-       <p>&copy Copyright <span class="copyright-span">TECHUB</span>. All Rights Reserved</p>
-        <p>Designed by <a href="">Norah Ariokot</a></p>
+       <p class="copyright-text">&copy Copyright 2024 <span class="copyright-span">Muntumi Technology</span>. All Rights Reserved</p>
+      
+        <form action="/admin_signin" method="GET" class="footer-btn-form">
+            <button type="submit" class="footer-btn">Admin Login</button>
+        </form>
     </div>
 {% endif %}    
     

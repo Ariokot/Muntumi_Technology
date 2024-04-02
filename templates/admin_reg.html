@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{% if current_route == "admin_reg" %}
 
 <main class="admin-reg-grid">
     <div class="admin-reg-info">
@@ -9,12 +8,19 @@
         <h1> Admin Portal </h1>
         <h2> Create Admin Profile </h2>
 
-        <form action="" class="admin-reg-form">
-            <input type="text" name="" id="" placeholder="name" class="admin-reg-form-input">
-            <input type="text" name="" id="" placeholder="email" class="admin-reg-form-input">
-            <input type="text" placeholder="password" class="admin-reg-form-input">
-            <input type="text" placeholder="Verify Password" class="admin-reg-form-input">
-            <button class="admin-reg-btn">Create account</button>
+        <form action="/admin_reg" method="POST" class="admin-reg-form">
+            <label for="name" class="admin-form-item" >Name</label>
+            <input type="text" name="name" value="{{name}}" id="" placeholder="name" class="admin-reg-form-input admin-form-item"  >
+            <label for="email" class="admin-form-item" >Email</label>
+            <input type="email" name="email" value="{{email}}" id="" placeholder="email" class="admin-reg-form-input admin-form-item">
+            <label for="password" class="admin-form-item" >Password</label>
+            <input type="password" name="password" placeholder="password" class="admin-reg-form-input admin-form-item">
+            <label for="verify-password" class="admin-form-item" >Verify Password</label>
+            <input type="password" name="verify-password" placeholder="Verify Password" class="admin-reg-form-input admin-form-item">
+            {%if msg %}
+                <p class="admin-password-unverified"><i class="fa-solid fa-triangle-exclamation admin-reg-icon"></i> {{msg}}</p>
+            {% endif %}
+            <button class="admin-reg-btn" type="submit">Create account</button>
         </form>
         
 
@@ -23,6 +29,6 @@
     <div class="admin-reg-img">
         <img src="../static/Images/pexels-linkedin-sales-navigator-1251862.jpg" alt="">
     </div>
-{% endif %}   
+  
 
 {% endblock %}

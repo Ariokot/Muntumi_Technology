@@ -7,8 +7,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+ 
    
 
 }
@@ -42,6 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
 /*border: solid red;*/
+    margin-left: 2em;
 }
 
 .schedule-title {

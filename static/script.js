@@ -1,33 +1,36 @@
-const mainSections = document.querySelectorAll("header, section, footer");
-//console.log(mainSections);
+function updateStyle() {
+    // Find the element
+    let selectedDiv = document.getElementsByClassName("service");
+    selectedDiv[0].style.backgroundColor = "#fff";
+    selectedDiv[0].style.color = "#000";
+    console.log(selectedDiv);
+}
 
-const sections = [];
+function updateStyle2() {
+    // Find the element
+    let selectedDiv = document.getElementsByClassName("service");
+    selectedDiv[0].style.backgroundColor = "#f86121";
+    selectedDiv[0].style.color = "#fff";
+    console.log(selectedDiv);
+}
 
-mainSections.forEach(function(item, index, array) {
-    let section = item.className.split(' ')[0];
-    sections.push(section);
+function resetStyle() {
+    // Find the element
+    let selectedDiv = document.getElementsByClassName("service");
+    selectedDiv[0].style.backgroundColor = "#fff";
+    selectedDiv[0].style.color = "#000";
+    console.log(selectedDiv);
+}
 
-    // Check if we're at the last item in the array
-    if (index === array.length - 1) {
-        sendFetchRequest(sections);
-    }
-});
+// Function to show side-bar navigation on smaller screens
+function showSidebar() {
+const sidebar = document.getElementById('side-bar');
+sidebar.style.display = "flex";
+}
 
-//console.log(sections);
-
-// To send sections array to the flask web server:
-// Define a fetch function and evoke it using the window.onload event
-function sendFetchRequest(sections) {
-    fetch("/sections", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify({sections:sections}),
-    })
-};
-
-console.log(sections);
-
+function hideSidebar() {
+    const sidebar = document.getElementById('side-bar');
+    sidebar.style.display = 'none';
+}
 
 

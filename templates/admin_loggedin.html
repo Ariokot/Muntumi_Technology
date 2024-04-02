@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!--<header class="admin-header">
+    <div class="adminheader-content">
+        <img src="../static/Images/Logo/logo-mtm-removebg-preview.png" alt="" class="logo" width="20%" height="">
+
+        <form action="/admin_logout" method="GET" class="header-btn-form">
+            <button type="submit" class="header-btn"> Admin Log out</button>
+        </form>
+
+    </div>
+</header>-->
+<section class="admin-dashboard" >
+        <div class="admin-dashboard-header">
+            <img src="../static/Images/Logo/logo-mtm-removebg-preview.png" alt="" class="logo" width="20%" height="">
+    
+            <form action="/admin_logout" method="GET" class="header-btn-form">
+                <button type="submit" class="header-btn"> Admin Log out</button>
+            </form>
+
+            
+    
+        </div>
+
+    <div class="admin-nav">
+        
+        <h2 class="admin-nav-title">Admin Dashboard</h2>
+        <div class="admin-nav-btn-container">
+            <form action="/user_appointments" class="admin-nav-form">
+                <button class="admin-nav-btn" type="submit"><i class="fa-regular fa-calendar-check fa-xl admin-nav-icon"></i> User Appointments</button>
+            </form>
+    
+            <form action="/user_msgs" class="admin-nav-form">
+                <button class="admin-nav-btn"><i class="fa-regular fa-envelope fa-xl admin-nav-icon"></i> User Messages</button>
+            </form>
+
+        </div>
+      
+
+    </div>
+
+    <!-- This section will contain the different admin management sections accessed via the navigation menu-->
+    <div class="admin-dashboard-display">
+    {% if current_route == "admin_loggedin" %}    
+        <div class="admin-info-container">
+            <h1>Welcome Admin, to Munutumi Technology Admin Portal</h1>
+            <p>Here you can view the website visitors who scheduled meeting calls and who sent in messages.</p>
+            <p>To view user appointments click User Appointments</p>
+            <p>To view user messages click User Messages</p>
+        </div>
+    {% endif %}       
+      
+    <!-- When user appointments is clicked -->
+       {% if current_route == "user_appointments" %}
+        <h2 class="admin-section-title"> User Appointments </h2>
+
+     
+            <table class="user-appointments-tbl">
+               
+                <thead>
+                    <tr>
+                        {% for key in keys_list%}
+                        <th>{{ key }}</th>
+                        {% endfor %}
+            
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in my_list %}
+            
+                                <tr>
+                                    {% for value in user.values() %}
+                                    <td class="button-cell" >{{value}}</td>
+                                    {% endfor %}
+                                </tr>
+            
+                        {% endfor %}
+            
+                </tbody>
+            </table>
+    
+
+       
+       {% endif %}
+
+    <!-- When user msgs is clicked -->
+        {% if current_route == "user_msgs" %}
+        <h2  class="admin-section-title"> User Messages</h2>
+
+        <table class="user-msgs-tbl">
+       
+            <thead>
+                <tr>
+                    {% for key in keys_list%}
+                    <th>{{ key }}</th>
+                    {% endfor %}
+                   
+                </tr>
+            </thead>
+            <tbody>
+                {% for msg in userMsg_info %}
+                        
+                            <tr>
+                                {% for value in msg.values() %}
+                                <td class="button-cell" >{{value}}</td>
+                                {% endfor %}
+                            </tr>
+                      
+
+                    {% endfor %}
+            
+            </tbody>
+        </table>       
+
+   
+   
+          
+        {% endif %}
+   
+
+    </div>
+    
+</section>
+
+
+
+{% endblock %}

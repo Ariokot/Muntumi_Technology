@@ -7,8 +7,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Karla', sans-serif;
-    font-size: 1rem;
+   
   
   
 
@@ -18,6 +17,72 @@ body {
 /* ============== 
     Typography
    ============== */ 
+.login-info {
+    font-family: 'Roboto', sans-serif;
+}   
+
+.admin-reg-info {
+    font-family: 'Roboto', sans-serif;
+}
+
+.admin-reg-btn,
+.login-btn {
+    background-color: #fe4f02;
+    font-family:  'Livic', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    padding-block: .5em;
+    border-radius: 20px;
+    font-weight: 600;
+    
+}
+
+.admin-createacc-btn {
+    background-color:#fe4f02;
+    background-color: #4f02fe;
+   /* background-color: #4169e1;*/
+    /*border: 2px solid black;*/
+    border: none;
+    border-radius: 5px;
+    font-family: 'Livic', sans-serif;
+    font-size: 1rem;
+    padding: .3em .8em;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.password-reset {
+    font-size: .9rem;
+}
+
+.admin-password-unverified,
+.admin-login-fail {
+    font-size: .8rem;
+    color: #800000;
+    color: #c21919;
+}
+
+.admin-reg-icon {
+    color: #ff0000;
+    color: #c21919;
+}
+
+.admin-section-title,
+.admin-nav-title {
+    font-family: 'Roboto', sans-serif;
+}
+
+.admin-nav-title {
+    text-align: center;
+}
+
+.admin-info-container {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 
  /* ============== 
     Layout
@@ -26,7 +91,8 @@ body {
  /* Login page */
 .login-grid,
 .admin-reg-grid,
-.flash-msg-body{
+.flash-msg-body,
+.admin-dashboard {
     display: grid;
     grid-template-columns: minmax(1em, 1fr)  minmax(90%, 1fr) minmax(1em, 1fr);
     /*border: solid yellow;*/
@@ -70,12 +136,24 @@ body {
     width: 80%;
 } 
 
+.login-form-item,
+.admin-reg-form-input {
+    padding: .5em;
+    margin-bottom: 1em;
+
+}
+
+::placeholder {
+    text-transform: capitalize;
+}
+
 .create-acct-title{
     margin-bottom: 0;
 }
 
 .admin-form-item {
     width: 100%;
+ 
     
 }
 
@@ -97,6 +175,123 @@ body {
     }
 }
 
+/* Admin Dash board page */
+.admin-dashboard {
+   
+    /*border: solid red;*/
+
+}
+
+.admin-nav {
+    background-color: #000080;
+    background-color: #4f02fe;
+    background-color: #ffbc9e;
+    background-color:#004788;
+    background-color: #000080;
+    /*background-color: #4f02fe;*/
+   
+  
+
+}
+
+.admin-nav-title {
+    color: #fff;
+}
+
+.admin-dashboard-display {
+    padding-left: 1em;
+}
+
+.admin-dashboard-header{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    /*border: solid red;*/
+ 
+}
+
+.admin-nav,
+.admin-dashboard-display {
+    grid-column: 2;
+    /*border: solid black;*/
+    padding-block: 1em;
+}
+
+.admin-nav-btn-container{
+    display: flex;
+    /*border: solid white;*/
+    margin-top: 3em;
+}
+
+.admin-nav-form {
+    /*border: solid orange;*/
+    padding-left: 1em;
+    /*margin-bottom: 1em;*/
+    /*border: solid white;*/
+  
+    
+}
+
+.admin-nav-btn {   
+    background-color:#000080;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    /*border: solid black;*/
+    
+    
+}
+
+.admin-nav-btn:hover,
+.admin-nav-btn:active {
+    background-color: #fe4f02;
+}
+
+
+.admin-nav-icon {
+    padding-right: .2em;
+}
+/* Tables */
+
+.user-appointments-tbl,
+.user-msgs-tbl {
+    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+
+    & td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        word-break: break-all;
+    }
+
+    & tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+    & th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color:#004788;
+        background-color: #4f02fe;
+        background-color: #fe844e;
+        background-color:#004788;
+       
+        
+        color: white;
+    }
+    
+}
+
 
 /* ================
     Media-Queries
@@ -108,6 +303,17 @@ body {
     .admin-reg-grid {
         display: grid;
         grid-template-columns: minmax(2em, 1fr) minmax(30%,1fr) minmax(50%,1fr) minmax(2em, 1fr);
+        /*border: solid yellow;*/
+       
+    }
+
+    .admin-dashboard {
+        display: grid;
+        grid-template-columns: minmax(2em, 1fr) minmax(20%,1fr) minmax(70%,1fr) minmax(2em, 1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        ". aside header ."
+        ". aside display . " ;
         /*border: solid yellow;*/
        
     }
@@ -134,12 +340,49 @@ body {
     }
 
     .admin-reg-info,
-    .login-info {
+    .login-info{
         grid-column: 2;
         /*border: solid red;*/
     
     }
 
+    .admin-nav {
+        height: 100vh;
+        grid-area: aside;
+        /*border: solid red;*/
+        margin-bottom: 0;
+      
+    }
+
+    .admin-dashboard-display {
+        grid-area:display;
+        /*border: solid red;*/
+       
+
+    }
+
+    .admin-dashboard-header {
+        grid-area: header;
+        margin-left: 1em;
+
+        /*border: solid red;*/
+        /*align-self: start;*/
+       
+    }
+
+    .admin-nav-btn-container{
+        flex-direction: column;
+    }
+
+    .admin-nav-btn {   
+        width: 80%;
+     
+    }
+    
+
+    
+
+    
        
 
 }

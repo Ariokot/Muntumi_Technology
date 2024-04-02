@@ -1,12 +1,12 @@
 import os
 import smtplib
 
+
 EMAIL_ADDRESS = os.environ.get('Email_User')
 EMAIL_PASSWORD = os.environ.get('Email_password')
 
 
 def send_appointment_mail(recipient, name, service,date):
-    # access the mail server of the email provider and the port number
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
         smtp.ehlo()
         smtp.starttls()
@@ -39,6 +39,23 @@ def receive_email(sender,  sender_subject, sender_msg):
         msg = f'Subject: {subject}\n\n{body}'
 
         smtp.sendmail(sender, EMAIL_ADDRESS, msg)
+
+def userMsg_reply(recipient):
+    # access the mail server of the email provider and the port number
+    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
+        smtp.ehlo()  
+    
+
+        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+
+        subject = "We have received your message"
+        body = f"We confirm receipt of your message, a technical member of our team with respond to you soon.\nThank you for contacting us.\n\nMuntumi Technology"
+
+        msg = f'Subject: {subject}\n\n{body}'
+
+        smtp.sendmail(EMAIL_ADDRESS, recipient, msg)        
 
 
 
