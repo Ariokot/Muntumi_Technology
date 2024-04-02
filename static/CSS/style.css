@@ -362,6 +362,11 @@ nav {
     width: 100%;
 }
 
+.nav-side-bar li {
+    list-style: none;
+    padding: .5em;
+}
+
 .menu-btn {
     display: none;
 }
