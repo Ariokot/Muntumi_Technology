@@ -8,6 +8,7 @@ from mail import send_appointment_mail, receive_email, userMsg_reply, EMAIL_ADDR
 
 # Configure application
 app = Flask(__name__)
+
 app.secret_key = 'sections2'
 
 # Ensure templates are auto-reloaded
