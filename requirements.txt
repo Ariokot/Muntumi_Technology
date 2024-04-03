@@ -2,7 +2,7 @@ Babel==2.8.0
 blinker==1.7.0
 cachelib==0.12.0
 click==8.1.7
-colorama==0.4.4
+co==234lorama==0.4.4
 cryptography==3.4.8
 cs50==9.3.4
 distro==1.7.0
@@ -24,7 +24,6 @@ more-itertools==8.10.0
 netifaces==0.11.0
 oauthlib==3.2.0
 packaging==23.2
-PyGObject==3.42.1
 pyinotify==0.9.6
 PyJWT==2.3.0
 pyOpenSSL==21.0.0
@@ -37,7 +36,7 @@ simplejson==3.17.6
 six==1.16.0
 SQLAlchemy==2.0.27
 sqlparse==0.4.4
-systemd-python==234
+systemd-python
 termcolor==2.4.0
 typing_extensions==4.9.0
 ubuntu-advantage-tools==8001
