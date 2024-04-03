@@ -2,7 +2,6 @@ Babel==2.8.0
 blinker==1.7.0
 cachelib==0.12.0
 click==8.1.7
-co==234lorama==0.4.4
 cryptography==3.4.8
 cs50==9.3.4
 distro==1.7.0
