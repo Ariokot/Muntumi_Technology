@@ -1,10 +1,10 @@
 import os
 import smtplib
+from dotenv import load_dotenv
 
-
-EMAIL_ADDRESS = os.environ.get('Email_User')
-EMAIL_PASSWORD = os.environ.get('Email_password')
-
+load_dotenv()
+EMAIL_ADDRESS = os.getenv('email')
+EMAIL_PASSWORD = os.getenv('password')
 
 def send_appointment_mail(recipient, name, service,date):
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
